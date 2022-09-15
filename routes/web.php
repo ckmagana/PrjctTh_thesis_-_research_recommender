@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GuestViewsController;
+use App\Http\Controllers\SessionViewsController;
 use Illuminate\Support\Facades\Route;
 
 /*

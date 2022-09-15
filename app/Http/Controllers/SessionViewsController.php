@@ -30,5 +30,5 @@ class SessionViewsController extends Controller
     public function homepage(){
         return view('SessionViews.homepage');
     }
-    
+
 }

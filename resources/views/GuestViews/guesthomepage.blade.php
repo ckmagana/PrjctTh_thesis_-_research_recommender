@@ -1,35 +1,6 @@
-<?php 
-// session_start();
-// if (isset($_SESSION['studentnumber']) && isset($_SESSION['password'])){
-//         header("Location: home.php");
-// }
-//        else{
-           ?>
-    
-<!DOCTYPE html>
-<html>
+@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thesis and Research Recommender</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
-    <style>
-        .imghover:hover{
-            -ms-transform: scale(1.2); /* IE 9 */
-            -webkit-transform: scale(1.2); /* Safari 3-8 */
-            transform: scale(1.2); 
-        }
-        .nav-link{
-            background-color: green;
-            border-radius: 25px;
-        }
-    </style>
-</head>
 
-<body style="background-image: linear-gradient(to left, green,#fde8ec); height: 100%;">
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar" style="background-image: linear-gradient(to left, green,#fde8ec); color: #fff;">
         <div class="container-fluid">
             <a class="navbar-brand logo" href="#"><img src="assets/img/tech/plplogo.png" alt="PLP Logo" style="width: 50px; height: 50px;">Thesis and Research</a>
@@ -64,7 +35,7 @@
         </nav>
     </div>
     <div>
-    
+
         <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="background-image: linear-gradient(to left, green,#fde8ec); color: #fff;">
             <div class="container"><a class="navbar-brand" href="#"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse"
@@ -140,7 +111,7 @@
                                     vitae leo.</p><button class="btn btn-outline-primary btn-sm" type="button">Read More</button></div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
@@ -149,13 +120,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.min.js"></script>
     <footer class="col-12">
-    <?php 
+    <?php
         // include "footer.php"; ?>
     </footer>
-</body>
-
-
-
-</html>
-<?php //}
- ?>
