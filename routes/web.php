@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\GuestViewsController;
-use App\Http\Controllers\SessionViewsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/guestaccountancy', [GuestViewsController::class, 'guestaccountancy']);
 Route::get('/guestartsandscience', [GuestViewsController::class, 'guestartsandscience']);
 Route::get('/guestcomputerstudies', [GuestViewsController::class, 'guestcomputerstudies']);
-Route::get('/guestaccountancyeducation', [GuestViewsController::class, 'guestaccountancyeducation']);
+Route::get('/guesteducation', [GuestViewsController::class, 'guesteducation']);
 Route::get('/guestengineering', [GuestViewsController::class, 'guestengineering']);
 Route::get('/guesthotelmanagement', [GuestViewsController::class, 'guesthotelmanagement']);
 Route::get('/guestnursing', [GuestViewsController::class, 'guestnursing']);

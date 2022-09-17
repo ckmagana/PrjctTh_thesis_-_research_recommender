@@ -1,7 +1,6 @@
-@extends('layouts.app')
-
-
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar" style="background-image: linear-gradient(to left, green,#fde8ec); color: #fff;">
+@extends('Layouts.app')
+@section('content')
+    <nav class="navbar navbar-light navbar-expand-lg clean-navbar" style="background-image: linear-gradient(to left, green,#fde8ec); color: #fff;">
         <div class="container-fluid">
             <a class="navbar-brand logo" href="#"><img src="assets/img/tech/plplogo.png" alt="PLP Logo" style="width: 50px; height: 50px;">Thesis and Research</a>
             <ul class="nav navbar-nav ml-auto">
@@ -10,116 +9,156 @@
         </div>
     </nav>
     <div>
-        <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
-            <div class="container"><a class="navbar-brand" href="#">Company Name</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse"
-                    id="navcol-1">
-                    <ul class="nav navbar-nav mr-auto">
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">First Item</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Second Item</a></li>
-                        <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Dropdown </a>
-                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
-                        </li>
-                    </ul><span class="navbar-text actions"> <a href="#" class="login">Log In</a><a class="btn btn-light action-button" role="button" href="#">Sign Up</a></span></div>
-            </div>
-        </nav>
-        <nav class="navbar navbar-light navbar-expand-md navigation-clean-search" style="background-image: linear-gradient(to left, green,#fde8ec); color: #fff;">
-            <div class="container"><a class="navbar-brand" href="#"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse"
-                    id="navcol-1">
+        <nav style="background-image: linear-gradient(to left, green,#fde8ec); color: #fff;">
+            <div class="container">
                     <ul class="nav navbar-nav"></ul>
-                    <form class="form-inline mr-auto" target="_self">
-                        <div class="form-group"><label for="search-field"></label><input class="form-control search-field" type="search" name="search" id="search-field" style="color:rgb(0,0,0);background-color:#e8e8e8;width:900px;"></div>
-                    </form><button class="btn btn-dark mr-auto" type="button" style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Search</button></div>
+                    <?php 
+                    //$curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
+                    ?>
+                    <form class="form-inline" method="POST">
+                        <div class="form-group w-100 d-flex justify-content-center"><input class="form-control w-75" type="search" name="search_bar" id="search-field" style="height: 40px;"><input class="btn form-group" type="submit" name = "search" value = "Search" style="background-color:rgb(255,255,255);color:rgb(0,0,0); margin-left: 10px;"></div>
+                        <input type="hidden" name="page" value="<?php //echo $curPageName ?>">
+                    </form>
+                    <?php
+    
+                    // if(isset($_POST['search'])){
+
+                    //     $searchoutput = $_POST['search_bar'];
+                        
+                    //     $webpage = $_POST['page'];
+                        
+                    //     if($webpage == "guestindex.php" ){
+                    //         //echo "<script>alert('test')</script>";
+                    //         $sql = $conn->query("SELECT * FROM tnr_dataset WHERE (`Title` LIKE '%".$searchoutput."%')" );
+                    //     }
+                    //     elseif($webpage == "guestaccountancy.php"){
+                    //         //echo $curPageName;
+                    //         $sql = $conn->query("SELECT * FROM tnr_dataset WHERE College = 'Accountancy' AND `Title` LIKE '%".$searchoutput."%'");
+                    //     }elseif($webpage == "guestcomputer.php"){
+                    //         //echo $curPageName;
+                    //         $sql = $conn->query("SELECT * FROM tnr_dataset WHERE College = 'Computer Science' AND `Title` LIKE '%".$searchoutput."%'");
+                    //     }
+                    //     elseif($webpage == "guesteducation.php"){
+                    //         //echo $curPageName;
+                    //         $sql = $conn->query("SELECT * FROM tnr_dataset WHERE College = 'Education' AND `Title` LIKE '%".$searchoutput."%'");
+                    //     }
+                    //     elseif($webpage == "guesthotelmanagement.php"){
+                    //         //echo $curPageName;
+                    //         $sql = $conn->query("SELECT * FROM tnr_dataset WHERE College = 'Hotel Management' AND `Title` LIKE '%".$searchoutput."%'");
+                    //     }
+                    //     elseif($webpage == "guestnursing.php"){
+                    //         //echo $curPageName;
+                    //         $sql = $conn->query("SELECT * FROM tnr_dataset WHERE College = 'Nursing' AND `Title` LIKE '%".$searchoutput."%'");
+                    //     }
+                    // }
+                    ?>
             </div>
         </nav>
     </div>
     <div>
+    
+        <nav class="" style="background-image: linear-gradient(to left, green,#fde8ec); color: #fff;">
+            <div class="container-fluid">
+                <div>
+                    <ul class="container-fluid d-flex justify-content-center">
+                        <li class="nav-item d-flex justify-content-center d-block mx-1 my-2" role="presentation"><a class="nav-link" style="color:white;" href="guesteducation.php">Education<br/><img class="" src="assets/img/course/educationbanner.jpg" style="height:300px; width:140px"></li></a>
+                        
+                        <li class="nav-item d-flex justify-content-center d-block  mx-1 my-2" role="presentation"><a class="nav-link" style="color:white;" href="guestcomputer.php">Computer<br/><img class="" src="assets/img/course/computersciencebanner.jpg" style="height:300px; width:140px"></li></a>
+                        
+                        <li class="nav-item d-flex justify-content-center d-block  mx-1 my-2" role="presentation"><a class="nav-link" style="color:white;" href="guestnursing.php">Nursing<br/><img class="" src="assets/img/course/nursingbanner.jpg" style="height:300px; width:140px"></li></a>
 
-        <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="background-image: linear-gradient(to left, green,#fde8ec); color: #fff;">
-            <div class="container"><a class="navbar-brand" href="#"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse"
-                    id="navcol-1">
-                    <ul class="nav navbar-nav mr-auto">
-                        <li class="nav-item" style="margin-right: 125px;" role="presentation"><a class="nav-link" style="color:white;" href="guesteducation.php">Education</a></li>
-                        <li class="nav-item" style="margin-right: 130px;" role="presentation"><a class="nav-link" style="color:white;" href="guestcomputer.php">Computer</a></li>
-                        <li class="nav-item" style="margin-right: 115px;" role="presentation"><a class="nav-link" style="color:white;" href="guestnursing.php">Nursing</a></li>
-                        <li class="nav-item" style="margin-right: 50px;" role="presentation"><a class="nav-link" style="color:white;" href="guesthotelmanagement.php">Hotel Management</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" style="color:white;" href="guestaccountancy.php">Accountancy</a></li>
-                    </ul><span class="navbar-text actions"> </span></div>
+                        <li class="nav-item d-flex justify-content-center d-block  mx-1 my-2" role="presentation"><a class="nav-link" style="color:white;" href="guesthotelmanagement.php">Hotel Management<br/><img class="" src="assets/img/course/hotelmanagementbanner.jpg" style="height:300px; width:140px"></li></a>
+                        
+                        <li class="nav-item d-flex justify-content-center d-block  mx-1 my-2" role="presentation"><a class="nav-link" style="color:white;" href="guestaccountancy.php">Accountancy<br/><img class="" src="assets/img/course/accountancybanner.jpg" style="height:300px; width:140px"></li></a>
+                        
+                    </ul><span class=""> </span></div>
             </div>
         </nav>
     </div>
-    <div class="container-fluid" style="background-image: linear-gradient(to left, green,#fde8ec); color: #fff; width:auto; margin-bottom: 250px;">
-        <img class="imghover" src="assets/img/course/educationbanner.jpg" style="height:300px;width:170px; margin-left: 90px; margin-right: 70px;">
-        <img class="imghover" src="assets/img/course/computersciencebanner.jpg" style="width:170px;height:300px; margin-right: 70px;">
-        <img class="imghover" src="assets/img/course/nursingbanner.jpg" style="width:170px;height:300px; margin-right: 70px;">
-        <img class="imghover" src="assets/img/course/hotelmanagementbanner.jpg" style="width:170px;height:300px; margin-right: 70px;">
-        <img class="imghover" src="assets/img/course/accountancybanner.jpg" style="width:170px;height:300px;">
-    </div>
+
+
     <main class="page blog-post-list">
-        <section class="clean-block clean-blog-list dark" style="background-image: linear-gradient(to left, green,#fde8ec);">
+    <section class="clean-block clean-blog-list dark" style="background-image: linear-gradient(to left, green,#fde8ec);">
             <div class="container">
                 <div class="block-content" style="border-style: inset;">
-                    <div class="clean-blog-post" style="padding:20px; margin: 10px; border-style: inset;">
-                        <div class="row">
-                            <div class="col-lg-5"><img class="rounded img-fluid" src="assets/img/tech/image4.jpg"></div>
-                            <div class="col-lg-7">
-                                <h3 style="color:black;">Lorem Ipsum dolor sit amet</h3>
-                                <div class="info" style="color:black;"><span class="text-muted">Jan 16, 2018 by&nbsp;<a href="#">John Smith</a></span></div>
-                                <p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis
-                                    vitae leo.</p><button class="btn btn-outline-primary btn-sm" type="button">Read More</button></div>
-                        </div>
-                    </div>
-                    <div class="clean-blog-post" style="padding:20px; margin: 10px; border-style: inset;">
-                        <div class="row">
-                            <div class="col-lg-5"><img class="rounded img-fluid" src="assets/img/tech/image4.jpg"></div>
-                            <div class="col-lg-7">
-                                <h3 style="color:black;">Lorem Ipsum dolor sit amet</h3>
-                                <div class="info" style="color:black;"><span class="text-muted">Jan 16, 2018 by&nbsp;<a href="#">John Smith</a></span></div>
-                                <p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis
-                                    vitae leo.</p><button class="btn btn-outline-primary btn-sm" type="button">Read More</button></div>
-                        </div>
-                    </div>
-                    <div class="clean-blog-post" style="padding:20px; margin: 10px; border-style: inset;">
-                        <div class="row">
-                            <div class="col-lg-5"><img class="rounded img-fluid" src="assets/img/tech/image4.jpg"></div>
-                            <div class="col-lg-7">
-                                <h3 style="color:black;">Lorem Ipsum dolor sit amet</h3>
-                                <div class="info" style="color:black;"><span class="text-muted">Jan 16, 2018 by&nbsp;<a href="#">John Smith</a></span></div>
-                                <p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis
-                                    vitae leo.</p><button class="btn btn-outline-primary btn-sm" type="button">Read More</button></div>
-                        </div>
-                    </div>
-                    <div class="clean-blog-post" style="padding:20px; margin: 10px; border-style: inset;">
-                        <div class="row">
-                            <div class="col-lg-5"><img class="rounded img-fluid" src="assets/img/tech/image4.jpg"></div>
-                            <div class="col-lg-7">
-                                <h3 style="color:black;">Lorem Ipsum dolor sit amet</h3>
-                                <div class="info" style="color:black;"><span class="text-muted">Jan 16, 2018 by&nbsp;<a href="#">John Smith</a></span></div>
-                                <p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis
-                                    vitae leo.</p><button class="btn btn-outline-primary btn-sm" type="button">Read More</button></div>
-                        </div>
-                    </div>
-                    <div class="clean-blog-post" style="padding:20px; margin: 10px; border-style: inset;">
-                        <div class="row">
-                            <div class="col-lg-5"><img class="rounded img-fluid" src="assets/img/tech/image4.jpg"></div>
-                            <div class="col-lg-7">
-                                <h3 style="color:black;">Lorem Ipsum dolor sit amet</h3>
-                                <div class="info" style="color:black;"><span class="text-muted">Jan 16, 2018 by&nbsp;<a href="#">John Smith</a></span></div>
-                                <p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis
-                                    vitae leo.</p><button class="btn btn-outline-primary btn-sm" type="button">Read More</button></div>
-                        </div>
-                    </div>
 
+                <?php 
+                //    $per_page_record = 10;  // Number of entries to show in a page.   
+                //    // Look for a GET variable page if not found default is 1.        
+                //    if (isset($_GET["page"])) {    
+                //        $page  = $_GET["page"];    
+                //    }    
+                //    else {    
+                //      $page=1;    
+                //    }    
+               
+                //    $start_from = ($page-1) * $per_page_record;   
+                //    if(!isset($_POST['search'])){  
+                //     $sql = $conn->query("SELECT * FROM tnr_dataset LIMIT $start_from, $per_page_record;"); 
+                //    }
+                    
+                //     if($sql){   
+                //         while($row = $sql->fetch_assoc()){
+                //             $title = $row['Title'];
+                //             $author = $row['Author'];
+                //             $year = $row['Year'];
+                //             $kind = $row['Kind_of_Paper'];
+                //             $college = $row['College'];
+                //             $content = $row['Content']; 
+                //             $links = $row['Links'];
+                
+                ?>
+                    <div class="clean-blog-post" style="padding:20px; margin: 10px; border-style: inset;">
+                        <div class="row">
+                            <div class="col-lg-5"><embed src="<?php //echo $links ?>" width="100%" height="100%" style="border-style: solid"/></div>
+                            <div class="col-lg-7">
+                                <h3 style="color:black;"><?php //echo $title; ?></h3>
+                                <div class="info" style="color:black;"><span class="text-muted"><?php //echo $year; ?> by&nbsp;<?php //echo $author; ?>&nbsp;&nbsp;(<?php //echo $kind; ?>)</span></div>
+                                <p style="color:black;"><?php //echo $content; ?> </p><button class="btn btn-outline-primary btn-sm" type="button"><a class="disabled-link" href="<?php //echo $links ?>">Download PDF here</a></button></div>
+                        </div>
+                    </div>
+                    <?php //}
+                        //}
+                     ?>
+                     <br>
+                    <div class="d-flex justify-content-center">  
+                        <?php  
+                            // $sql = "SELECT COUNT(*) FROM tnr_dataset";     
+                            // $rs_result = mysqli_query($conn, $sql);     
+                            // $row = mysqli_fetch_row($rs_result);     
+                            // $total_records = $row[0];     
+                            
+                            // echo "</br>";     
+                            // // Number of pages required.   
+                            // $total_pages = ceil($total_records / $per_page_record);     
+                            // $pagLink = "";       
+                        
+                            // if($page>=2){   
+                            //     echo "<button class='btn btn-dark' style='border: 2px solid #4CAF50;'><a href='guestindex.php?page=".($page-1)."'>  Prev </a></button>";   
+                            // }       
+                                    
+                            // for ($i=1; $i<=$total_pages; $i++) {   
+                            // if ($i == $page) {   
+                            //     $pagLink .= "<button class='btn btn-dark' style='border: 2px solid #4CAF50;'><a style='' class='active' href='guestindex.php?page="  
+                            //                                         .$i."'><b>".$i." </b></a></button>";   
+                            // }               
+                            // else  {   
+                            //     $pagLink .= "<button class='btn btn-dark' style='border: 2px solid #4CAF50;'><a href='guestindex.php?page=".$i."'>   
+                            //                                         ".$i." </a></button>";     
+                            // }   
+                            // };     
+                            // echo $pagLink;   
+                    
+                            // if($page<$total_pages){   
+                            //     echo "<button class='btn btn-dark' style='border: 2px solid #4CAF50;'><a href='guestindex.php?page=".($page+1)."'>  Next </a></button>";   
+                            // }   
+                        ?>    
+                    </div>  
                 </div>
             </div>
         </section>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.min.js"></script>
-    <footer class="col-12">
-    <?php
-        // include "footer.php"; ?>
-    </footer>
+    <script src="assets/js/script.min.js"></script> --}}
+@endsection
