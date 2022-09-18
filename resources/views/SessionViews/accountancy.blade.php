@@ -1,4 +1,4 @@
-@extends('Layouts.app')
+@extends('layouts.app')
 @section('content')
         <div>
             <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="background-image: linear-gradient(to left, green,#fde8ec);">
