@@ -24,7 +24,7 @@
         }
         </style> --}}
 </head>
-<body>
+<body style="background-image: linear-gradient(to left, green,#fde8ec);">
 <header>
 
     <?php
@@ -62,16 +62,16 @@
         </div>
         
     </nav>
-    <nav class="navbar navbar-light bg-light" style="margin:2px 0px 0px 0px;background-color:rgba(255,255,255,0); background-image: linear-gradient(to left, black,green);">
+    <nav class="navbar navbar-light" style="margin:2px 0px 0px 0px;background-color:rgba(255,255,255,0); background-image: linear-gradient(to left, black,green);">
         <div class="container-fluid">
-            <a class="navbar-brand nav-link">Home</a>
-            <a class="navbar-brand nav-link">Accountancy</a>
-            <a class="navbar-brand nav-link">Arts and Science</a>
-            <a class="navbar-brand nav-link">Education</a>
-            <a class="navbar-brand nav-link">Engineering</a>
-            <a class="navbar-brand nav-link">Computer Studies</a>
-            <a class="navbar-brand nav-link">Nursing</a>
-            <a class="navbar-brand nav-link">Hotel Management</a>
+            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Home</a></button>
+            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Accountancy</a></button>
+            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Arts and Science</a></button>
+            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Education</a></button>
+            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Engineering</a></button>
+            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Computer Studies</a></button>
+            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Nursing</a></button>
+            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Hotel Management</a></button>
         </div>
       </nav>
     {{-- <nav class="navbar navbar-expand-lg navbar-light bg-light"
@@ -151,29 +151,36 @@
             // }
         </script>
     </nav>
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button"
-        style="margin:10px 0px 0px 0px;background-color:rgba(255,255,255,0);">
+    {{-- <nav class="navbar navbar-light m-5"> --}}
+        {{-- style="margin:10px 0px 0px 0px;background-color:rgba(255,255,255,0);"> --}}
         <?php
         // $curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
         
         // if($curPageName != "recommend_test.php"){
         ?>
 
-        <form class="form-inline mr-auto" method="POST">
-            <div class="form-group"><label for="search-field"></label><input class="form-control search-field"
-                    type="search" name="search_bar" value="<?php if (isset($_POST['search'])) {
-                        echo $_POST['search_bar'];
-                    } ?>" id="search-field"
+        <form class="" method="POST">
+            {{-- <div class="form-group"><label for="search-field"></label><input class="form-control search-field"
+                    type="search" name="search_bar" value="<?php //if (isset($_POST['search'])) {
+                        //echo $_POST['search_bar'];
+                    //} ?>" id="search-field"
                     style="color:rgb(0,0,0);background-color:#e8e8e8;width:900px; margin-left:150px;"></div>
             <input class="btn btn-dark mr-auto form-group" type="submit" name="search" value="Search"
                 style="background-color:rgb(255,255,255);color:rgb(0,0,0); margin-left: 10px;">
             <input type="hidden" name="page" value="<?php //echo $curPageName
-            ?>">
+            
+            ?>"> --}}
+            <div class="container my-3">
+                <div class="input-group mb-3">
+                    <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+                    <span class="input-group-text" id="basic-addon2"><button class="btn btn-primary">Search</button></span>
+                  </div>
+            </div>
         </form>
         </div>
         <?php //}
         ?>
-    </nav>
+    {{-- </nav> --}}
     <?php
     
     //     if(isset($_POST['search'])){
@@ -234,6 +241,19 @@
     // }
     ?>
 </header>
+{{-- <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br> --}}
 
 
 
@@ -304,7 +324,7 @@
     </div>
 </body> --}}
 
-<footer>
+<footer class="my-3">
     <div class="row align-items-center" style="background-image: linear-gradient(to left, green,black); padding: 2%;">
         <div class="col-4">
             <div class="librMisandVis">
@@ -347,9 +367,9 @@
         <div class="col-4">
             <div class="librMisandVis">
                 <p class="right">All Rights Reserved.</p>
-                <p class="right"><a href="terms-and-conditions.php" style="text-decoration: none; color:white;">
+                <p class="right"><a href="terms-and-conditions.php">
                         Terms and Conditions</a></p>
-                <p class="right"><a href="privacy-policy.php" style="text-decoration: none; color:white;">Privacy
+                <p class="right"><a href="privacy-policy.php">Privacy
                         Policy</a></p>
             </div>
         </div>

@@ -11,9 +11,11 @@
                 </div>
             </nav>
         </div>
+        <section class="clean-block clean-blog-list dark" style="background-image: linear-gradient(to left, green,#fde8ec);">
         <div class="container">
             <img class="imghover" src="assets/img/course/accountancy_banner1.jpg" style="height:300px; width:100%; border-style: inset;">
         </div>
+        </section>
         <br>
         <main class="page blog-post-list">
             <section class="clean-block clean-blog-list dark" style="background-image: linear-gradient(to left, green,#fde8ec);">
