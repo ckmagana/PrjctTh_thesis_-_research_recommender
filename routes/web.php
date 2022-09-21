@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\GuestViewsController;
 use App\Http\Controllers\SessionViewsController;
+use App\Http\Controllers\AdminViewsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,8 +32,7 @@ Route::get('/engineering', [SessionViewsController::class, 'engineering']);
 Route::get('/hotelmanagement', [SessionViewsController::class, 'hotelmanagement']);
 Route::get('/nursing', [SessionViewsController::class, 'nursing']);
 Route::get('/homepage', [SessionViewsController::class, 'homepage']);
-
-
+Route::get('/manageaccount', [AdminViewsController::class, 'manageaccount']);
 
 
 Route::get('/', function () {
