@@ -33,6 +33,9 @@ Route::get('/hotelmanagement', [SessionViewsController::class, 'hotelmanagement'
 Route::get('/nursing', [SessionViewsController::class, 'nursing']);
 Route::get('/homepage', [SessionViewsController::class, 'homepage']);
 Route::get('/manageaccount', [AdminViewsController::class, 'manageaccount']);
+Route::get('/managedocument', [AdminViewsController::class, 'managedocument']);
+Route::get('/addnewaccount', [AdminViewsController::class, 'addnewaccount']);
+Route::get('/addnewdocument', [AdminViewsController::class, 'addnewdocument']);
 
 
 Route::get('/', function () {
