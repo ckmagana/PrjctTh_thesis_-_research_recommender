@@ -1,13 +1,6 @@
 @extends('Layouts.app')
 @section('content')
-    <nav class="navbar navbar-light navbar-expand-lg clean-navbar" style="background-image: linear-gradient(to left, green,#fde8ec); color: #fff;">
-        <div class="container-fluid">
-            <a class="navbar-brand logo" href="#"><img src="assets/img/tech/plplogo.png" alt="PLP Logo" style="width: 50px; height: 50px;">Thesis and Research</a>
-            <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item" role="presentation"><a class="nav-link" href="loginform.php" style="color:#000000;">Sign In</a></li>
-            </ul>
-        </div>
-    </nav>
+    
     <div>
         <!-- <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
             <div class="container"><a class="navbar-brand" href="#">Company Name</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -24,7 +17,7 @@
         </nav> -->
         <nav class="navbar navbar-light" style="background-image: linear-gradient(to left, green,#fde8ec); color: #fff;">
             <div class="container">
-                <div class="container-fluid">
+                {{-- <div class="container-fluid">
                     <ul class="nav navbar-nav"></ul>
                     <?php 
                     //$curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
@@ -32,7 +25,7 @@
                     <form class="form-inline" method="POST">
                         <div class="form-group w-100 d-flex justify-content-center"><input class="form-control w-75" type="search" name="search_bar" id="search-field" style="height: 40px;"><input class="btn form-group" type="submit" name = "search" value = "Search" style="background-color:rgb(255,255,255);color:rgb(0,0,0); margin-left: 10px;"></div>
                         <input type="hidden" name="page" value="<?php //echo $curPageName ?>">
-                    </form></div>
+                    </form></div> --}}
                     <?php
     
                     // if(isset($_POST['search'])){

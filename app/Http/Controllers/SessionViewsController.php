@@ -30,5 +30,8 @@ class SessionViewsController extends Controller
     public function homepage(){
         return view('SessionViews.homepage');
     }
+    public function profilepage(){
+        return view('SessionViews.profilepage');
+    }
 
 }

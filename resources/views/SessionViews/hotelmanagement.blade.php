@@ -5,7 +5,7 @@
         <div class="container">
             <div class="container-fluid">
                 <b>
-                    <h4>Accountancy</h4>
+                    <h4>Hotel Management</h4>
                 </b>
             </div>
         </div>
