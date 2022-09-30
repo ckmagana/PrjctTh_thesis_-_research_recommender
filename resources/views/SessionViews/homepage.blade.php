@@ -5,17 +5,17 @@
                 <div class="container">
                     <div class="container-fluid">
                         <b>
-                            <h4>Accountancy</h4>
+                            <h4>Home Page</h4>
                         </b>
                     </div>
                 </div>
             </nav>
         </div>
-        <section class="clean-block clean-blog-list dark" style="background-image: linear-gradient(to left, green,#fde8ec);">
+        {{-- <section class="clean-block clean-blog-list dark" style="background-image: linear-gradient(to left, green,#fde8ec);">
         <div class="container">
-            <img class="imghover" src="{{ asset('img/course/accountancy_banner1.jpg') }}" alt="Accountancy Banner" style="height:300px; width:100%; border-style: inset;" >
+            <img class="imghover" src="{{ asset('img/course/PLP_cover.jpg') }}" alt="PLP Cover" style="height:300px; width:100%; border-style: inset;" >
         </div>
-        </section>
+        </section> --}}
         <br>
         <main class="page blog-post-list">
             <section class="clean-block clean-blog-list dark" style="background-image: linear-gradient(to left, green,#fde8ec);">

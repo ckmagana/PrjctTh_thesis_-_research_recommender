@@ -16,27 +16,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/guestaccountancy', [GuestViewsController::class, 'guestaccountancy']);
-Route::get('/guestartsandscience', [GuestViewsController::class, 'guestartsandscience']);
-Route::get('/guestcomputerstudies', [GuestViewsController::class, 'guestcomputerstudies']);
-Route::get('/guesteducation', [GuestViewsController::class, 'guesteducation']);
-Route::get('/guestengineering', [GuestViewsController::class, 'guestengineering']);
-Route::get('/guesthotelmanagement', [GuestViewsController::class, 'guesthotelmanagement']);
-Route::get('/guestnursing', [GuestViewsController::class, 'guestnursing']);
-Route::get('/guesthomepage', [GuestViewsController::class, 'guesthomepage']);
-Route::get('/accountancy', [SessionViewsController::class, 'accountancy']);
-Route::get('/artsandscience', [SessionViewsController::class, 'artsandscience']);
-Route::get('/computerstudies', [SessionViewsController::class, 'computerstudies']);
-Route::get('/education', [SessionViewsController::class, 'education']);
-Route::get('/engineering', [SessionViewsController::class, 'engineering']);
-Route::get('/hotelmanagement', [SessionViewsController::class, 'hotelmanagement']);
-Route::get('/nursing', [SessionViewsController::class, 'nursing']);
-Route::get('/homepage', [SessionViewsController::class, 'homepage']);
-Route::get('/profilepage', [SessionViewsController::class, 'profilepage']);
-Route::get('/manageaccount', [AdminViewsController::class, 'manageaccount']);
-Route::get('/managedocument', [AdminViewsController::class, 'managedocument']);
-Route::get('/addnewaccount', [AdminViewsController::class, 'addnewaccount']);
-Route::get('/addnewdocument', [AdminViewsController::class, 'addnewdocument']);
+Route::get('/GuestViews/guestaccountancy', [GuestViewsController::class, 'guestaccountancy']);
+Route::get('/GuestViews/guestartsandscience', [GuestViewsController::class, 'guestartsandscience']);
+Route::get('/GuestViews/guestcomputerstudies', [GuestViewsController::class, 'guestcomputerstudies']);
+Route::get('/GuestViews/guesteducation', [GuestViewsController::class, 'guesteducation']);
+Route::get('/GuestViews/guestengineering', [GuestViewsController::class, 'guestengineering']);
+Route::get('/GuestViews/guesthotelmanagement', [GuestViewsController::class, 'guesthotelmanagement']);
+Route::get('/GuestViews/guestnursing', [GuestViewsController::class, 'guestnursing']);
+Route::get('/GuestViews/guesthomepage', [GuestViewsController::class, 'guesthomepage']);
+Route::get('/SessionViews/accountancy', [SessionViewsController::class, 'accountancy']);
+Route::get('/SessionViews/artsandscience', [SessionViewsController::class, 'artsandscience']);
+Route::get('/SessionViews/computerstudies', [SessionViewsController::class, 'computerstudies']);
+Route::get('/SessionViews/education', [SessionViewsController::class, 'education']);
+Route::get('/SessionViews/engineering', [SessionViewsController::class, 'engineering']);
+Route::get('/SessionViews/hotelmanagement', [SessionViewsController::class, 'hotelmanagement']);
+Route::get('/SessionViews/nursing', [SessionViewsController::class, 'nursing']);
+Route::get('/SessionViews/homepage', [SessionViewsController::class, 'homepage']);
+Route::get('/SessionViews/profilepage', [SessionViewsController::class, 'profilepage']);
+Route::get('/AdminViews/manageaccount', [AdminViewsController::class, 'manageaccount']);
+Route::get('/AdminViews/managedocument', [AdminViewsController::class, 'managedocument']);
+Route::get('/AdminViews/addnewaccount', [AdminViewsController::class, 'addnewaccount']);
+Route::get('/AdminViews/addnewdocument', [AdminViewsController::class, 'addnewdocument']);
 
 
 Route::get('/', function () {

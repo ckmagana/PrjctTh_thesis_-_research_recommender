@@ -5,7 +5,7 @@
                 <div class="container">
                     <div class="container-fluid">
                         <b>
-                            <h4>Accountancy</h4>
+                            <h4>Arts and Science</h4>
                         </b>
                     </div>
                 </div>

@@ -5,7 +5,7 @@
                 <div class="container">
                     <div class="container-fluid">
                         <b>
-                            <h4>Accountancy</h4>
+                            <h4>Engineering</h4>
                         </b>
                     </div>
                 </div>
@@ -13,7 +13,7 @@
         </div>
         <section class="clean-block clean-blog-list dark" style="background-image: linear-gradient(to left, green,#fde8ec);">
         <div class="container">
-            <img class="imghover" src="{{ asset('img/course/accountancy_banner1.jpg') }}" alt="Engineering Cover" style="height:300px; width:100%; border-style: inset;" >
+            <img class="imghover" src="{{ asset('img/course/engineering_cover.jpg') }}" alt="Engineering Cover" style="height:300px; width:100%; border-style: inset;" >
         </div>
         </section>
         <br>
