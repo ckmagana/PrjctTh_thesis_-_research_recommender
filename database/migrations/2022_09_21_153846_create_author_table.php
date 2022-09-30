@@ -15,8 +15,7 @@ return new class extends Migration
     {
         Schema::create('author', function (Blueprint $table) {
             $table->id('author_ID');
-            $table->string('name_initials');
-            $table->string('surname');
+            $table->string('authors');
         });
     }
 

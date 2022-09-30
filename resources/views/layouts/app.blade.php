@@ -89,14 +89,14 @@
     </nav>
     <nav class="navbar navbar-light" style="margin:2px 0px 0px 0px;background-color:rgba(255,255,255,0); background-image: linear-gradient(to left, black,green);">
         <div class="container-fluid">
-            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Home</a></button>
-            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Accountancy</a></button>
-            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Arts and Science</a></button>
-            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Education</a></button>
-            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Engineering</a></button>
-            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Computer Studies</a></button>
-            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Nursing</a></button>
-            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Hotel Management</a></button>
+            <button type="button" class="border border-dark border border-1 btn btn-info rounded-pill"><a class="navbar-brand nav-link">Home</a></button>
+            <button type="button" class="border border-dark border border-1 btn btn-info rounded-pill"><a class="navbar-brand nav-link">Accountancy</a></button>
+            <button type="button" class="border border-dark border border-1 btn btn-info rounded-pill"><a class="navbar-brand nav-link">Arts and Science</a></button>
+            <button type="button" class="border border-dark border border-1 btn btn-info rounded-pill"><a class="navbar-brand nav-link">Education</a></button>
+            <button type="button" class="border border-dark border border-1 btn btn-info rounded-pill"><a class="navbar-brand nav-link">Engineering</a></button>
+            <button type="button" class="border border-dark border border-1 btn btn-info rounded-pill"><a class="navbar-brand nav-link">Computer Studies</a></button>
+            <button type="button" class="border border-dark border border-1 btn btn-info rounded-pill"><a class="navbar-brand nav-link">Nursing</a></button>
+            <button type="button" class="border border-dark border border-1 btn btn-info rounded-pill"><a class="navbar-brand nav-link">Hotel Management</a></button>
         </div>
       </nav>
     {{-- <nav class="navbar navbar-expand-lg navbar-light bg-light"
