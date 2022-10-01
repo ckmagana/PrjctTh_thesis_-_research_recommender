@@ -37,13 +37,39 @@
 
     <nav class="navbar navbar-light bg-light" style="background-image: linear-gradient(to left, black,green);">
         <div class="container-fluid" style="background-image: linear-gradient(to left, black,green);">
-            <a class="navbar-brand" href="#" style="color: white; "><img src="assets/img/tech/plplogo.png"
-                    alt="PLP Logo" style="width: 50px; height: 50px;">Thesis and Research</a>
+            <a class="navbar-brand" href="#" style="color: white; "><img src="{{ asset('img/tech/plplogo.png') }}"
+                    alt="PLP Logo" style="width: 50px; height: 50px;">PLP Thesis and Research Recommender System</a>
                     <div class="d-flex">
-                        <img class="rounded-circle"src="data:image/jpg;charset=utf8;base64,<?php //echo base64_encode($profilepic);
+                        <img class="rounded-circle"src="{{ asset('img/avatars/avatar1.jpg') }}<?php //echo base64_encode($profilepic);
                         ?>"
+                        {{-- data:image/jpg;charset=utf8;base64, --}}
                             style="width:40px;height:40px; border-style: solid; border-color: green; margin-right:10px;">
-                        <div class="dropdown">
+                            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                                class="fas fa-bars"></i></button>
+                        <!-- Navbar Search-->
+                
+                        <!-- Navbar-->
+                        {{-- <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                            <li class="nav-item dropdown"> --}}
+                
+                        <a class="nav-link dropdown-toggle position-absolute top-50 end-0 translate-middle-y rounded-3 bg-dark" id="navbarDropdown"
+                            href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+                                class="fas fa-user fa-fw"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ url('/SessionViews/profilepage') }}">Profile</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/SessionViews/recommendationpage') }}">Recommendations</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/SessionViews/savedpage') }}">Saved</a></li>
+                            <li><a class="dropdown-item" href="#adminlogout">Logout</a></li>
+                        </ul>   
+                        
+                        
+                        
+                        
+                        
+                        
+                       
+                        
+                            {{-- <div class="dropdown">
                             <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <?php //echo $studentname
@@ -56,7 +82,7 @@
                                 <a class="dropdown-item" target="_blank" href="ckeditor.php">Your Editor</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="logout.php">Log out</a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
         </div>
@@ -64,14 +90,14 @@
     </nav>
     <nav class="navbar navbar-light" style="margin:2px 0px 0px 0px;background-color:rgba(255,255,255,0); background-image: linear-gradient(to left, black,green);">
         <div class="container-fluid">
-            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Home</a></button>
-            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Accountancy</a></button>
-            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Arts and Science</a></button>
-            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Education</a></button>
-            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Engineering</a></button>
-            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Computer Studies</a></button>
-            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Nursing</a></button>
-            <button type="button" class="btn btn-info rounded-pill"><a class="navbar-brand nav-link">Hotel Management</a></button>
+            <button type="button" class="border border-dark border border-1 btn btn-info rounded-pill text-center"><a class="navbar-brand nav-link" href="{{ url('/SessionViews/homepage') }}">Home</a></button>
+            <button type="button" class="border border-dark border border-1 btn btn-info rounded-pill text-center"><a class="navbar-brand nav-link" href="{{ url('/SessionViews/accountancy') }}">Accountancy</a></button>
+            <button type="button" class="border border-dark border border-1 btn btn-info rounded-pill text-center"><a class="navbar-brand nav-link" href="{{ url('/SessionViews/artsandscience') }}">Arts and Science</a></button>
+            <button type="button" class="border border-dark border border-1 btn btn-info rounded-pill text-center"><a class="navbar-brand nav-link" href="{{ url('/SessionViews/education') }}">Education</a></button>
+            <button type="button" class="border border-dark border border-1 btn btn-info rounded-pill text-center"><a class="navbar-brand nav-link" href="{{ url('/SessionViews/engineering') }}">Engineering</a></button>
+            <button type="button" class="border border-dark border border-1 btn btn-info rounded-pill text-center"><a class="navbar-brand nav-link" href="{{ url('/SessionViews/computerstudies') }}">Computer Studies</a></button>
+            <button type="button" class="border border-dark border border-1 btn btn-info rounded-pill text-center"><a class="navbar-brand nav-link" href="{{ url('/SessionViews/nursing') }}">Nursing</a></button>
+            <button type="button" class="border border-dark border border-1 btn btn-info rounded-pill text-center"><a class="navbar-brand nav-link" href="{{ url('/SessionViews/hotelmanagement') }}">Hotel Management</a></button>
         </div>
       </nav>
     {{-- <nav class="navbar navbar-expand-lg navbar-light bg-light"
@@ -359,8 +385,11 @@
             <li><a href="assets/docs/STUDENT-PRIMER-2020-2021.pdf">Student Handbook Version 2020-2021</a></li>
 
             <h3>archives</h3>
-            <li style="color: black;"><strong>Archive 2020</strong></li>
-            <li style="color: black;"><strong>Archive 2021</strong></li>
+            <li style="color: black;"><strong>Archives from 2017 - 2021</strong></li>
+            {{-- <li style="color: black;"><strong>Archive 2020</strong></li>
+            <li style="color: black;"><strong>Archive 2019</strong></li>
+            <li style="color: black;"><strong>Archive 2018</strong></li>
+            <li style="color: black;"><strong>Archive 2017</strong></li> --}}
         </div>
     </div>
     <div class="row align-items-center" style="background-image: linear-gradient(to left, green,black); padding: 2%;">

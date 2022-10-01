@@ -1,177 +1,183 @@
 @extends('Layouts.app')
 @section('content')
 
-<nav class="navbar navbar-light navbar-expand-lg clean-navbar" style="background-image: linear-gradient(to left, green,#fde8ec); color: #fff;">
-    <div class="container-fluid">
-        <a class="navbar-brand logo" href="#"><img src="assets/img/tech/plplogo.png" alt="PLP Logo" style="width: 50px; height: 50px;">Thesis and Research</a>
-        <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item" role="presentation"><a class="nav-link" href="loginform.php" style="color:#000000;">Sign In</a></li>
-        </ul>
-    </div>
-</nav>
 <div>
-    <nav class="navbar navbar-light" style="background-image: linear-gradient(to left, green,#fde8ec); color: #fff;">
-        <div class="container">
-            <div class="container-fluid">
-                <ul class="nav navbar-nav"></ul>
-                <?php 
-                //$curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
-                ?>
-                <form class="form-inline" method="POST">
-                    <div class="form-group w-100 d-flex justify-content-center"><input class="form-control w-75" type="search" name="search_bar" id="search-field" style="height: 40px;"><input class="btn form-group" type="submit" name = "search" value = "Search" style="background-color:rgb(255,255,255);color:rgb(0,0,0); margin-left: 10px;"></div>
-                    <input type="hidden" name="page" value="<?php //echo $curPageName ?>">
-                </form></div>
-                <?php
-
-                // if(isset($_POST['search'])){
-
-                //     $searchoutput = $_POST['search_bar'];
-                    
-                //     $webpage = $_POST['page'];
-                    
-                //     if($webpage == "guestindex.php" ){
-                //         //echo "<script>alert('test')</script>";
-                //         $sql = $conn->query("SELECT * FROM tnr_dataset WHERE (`Title` LIKE '%".$searchoutput."%')" );
-                //     }
-                //     elseif($webpage == "guestaccountancy.php"){
-                //         //echo $curPageName;
-                //         $sql = $conn->query("SELECT * FROM tnr_dataset WHERE College = 'Accountancy' AND `Title` LIKE '%".$searchoutput."%'");
-                //     }elseif($webpage == "guestcomputer.php"){
-                //         //echo $curPageName;
-                //         $sql = $conn->query("SELECT * FROM tnr_dataset WHERE College = 'Computer Science' AND `Title` LIKE '%".$searchoutput."%'");
-                //     }
-                //     elseif($webpage == "guesteducation.php"){
-                //         //echo $curPageName;
-                //         $sql = $conn->query("SELECT * FROM tnr_dataset WHERE College = 'Education' AND `Title` LIKE '%".$searchoutput."%'");
-                //     }
-                //     elseif($webpage == "guesthotelmanagement.php"){
-                //         //echo $curPageName;
-                //         $sql = $conn->query("SELECT * FROM tnr_dataset WHERE College = 'Hotel Management' AND `Title` LIKE '%".$searchoutput."%'");
-                //     }
-                //     elseif($webpage == "guestnursing.php"){
-                //         //echo $curPageName;
-                //         $sql = $conn->query("SELECT * FROM tnr_dataset WHERE College = 'Nursing' AND `Title` LIKE '%".$searchoutput."%'");
-                //     }
-                // }
-                ?>
+    <div>
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="background-image: linear-gradient(to left, green,#fde8ec);">
+            <div class="container">
+                <div class="container-fluid">
+                    <b>
+                        <h4>Accountancy</h4>
+                    </b>
+                </div>
             </div>
-    </nav>
-</div>
-<div>
+        </nav>
+    </div>
+    <section class="clean-block clean-blog-list dark" style="background-image: linear-gradient(to left, green,#fde8ec);">
+    <div class="container">
+        <img class="imghover" src="{{ asset('img/course/accountancy_cover.jpg') }}" alt="Accountancy Cover" style="height:300px; width:100%; border-style: inset;" >
+    </div>
+    </section>
+    <br>
+    <main class="page blog-post-list">
+        <section class="clean-block clean-blog-list dark" style="background-image: linear-gradient(to left, green,#fde8ec);">
+            <div class="container">
+                <div class="block-content" style="border-style: inset;">
+                    <?php
+                    // $per_page_record = 10;  // Number of entries to show in a page.   
+                    // // Look for a GET variable page if not found default is 1.        
+                    // if (isset($_GET["page"])) {
+                    //     $page  = $_GET["page"];
+                    // } else {
+                    //     $page = 1;
+                    // }
+                    // $start_from = ($page - 1) * $per_page_record;
+                    // if (!isset($_POST['search'])) {
+                    //     $sql = $conn->query("SELECT * FROM tnr_dataset WHERE College = 'Accountancy' LIMIT $start_from, $per_page_record");
+                    // }
+                    // elseif ($resultcount == 0){
+                    //     echo "No Results Found";
+                    // }
+                    // if ($sql) {
+                    //     while ($row = $sql->fetch_assoc()) {
+                    //         $ID = $row['ID'];
+                    //         $title = $row['Title'];
+                    //         $author = $row['Author'];
+                    //         $year = $row['Year'];
+                    //         $kind = $row['Kind_of_Paper'];
+                    //         $college = $row['College'];
+                    //         $content = $row['Content'];
+                    //         $links = $row['Links'];
 
-    <!-- <nav class="navbar navbar-light navbar-expand-md navigation-clean-button mx-0 my-0" style="background-image: linear-gradient(to left, green,#fde8ec); color: #fff;">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse d-flex justify-content-center"
-                id="navcol-1">
-                <ul class="nav navbar-nav mr-auto d-flex justify-content-center">
-                    <li class="nav-item" style="margin-right: 10px;" role="presentation"><a class="nav-link" style="color:white;" href="guesteducation.php">Education</a></li>
-                    <li class="nav-item" style="margin-right: 10px;" role="presentation"><a class="nav-link" style="color:white;" href="guestcomputer.php">Computer</a></li>
-                    <li class="nav-item" style="margin-right: 10x;" role="presentation"><a class="nav-link" style="color:white;" href="guestnursing.php">Nursing</a></li>
-                    <li class="nav-item" style="margin-right: 10px;" role="presentation"><a class="nav-link" style="color:white;" href="guesthotelmanagement.php">Hotel Management</a></li>
-                    <li class="nav-item" style="margin-right: 10px;"role="presentation"><a class="nav-link" style="color:white;" href="guestaccountancy.php">Accountancy</a></li>
-                </ul><span class="navbar-text actions"> </span></div>
-    </nav> -->
-    <nav class="" style="background-image: linear-gradient(to left, green,#fde8ec); color: #fff;">
-        <div class="container-fluid">
-            <div>
-                <ul class="container-fluid d-flex justify-content-center">
-                    <li class="nav-item d-flex justify-content-center d-block mx-1 my-2 px-3" role="presentation"><a class="nav-link" style="color:white;" href="guesteducation.php">Education</li></a>
-                    
-                    <li class="nav-item d-flex justify-content-center d-block  mx-1 my-2 px-3" role="presentation"><a class="nav-link" style="color:white;" href="guestcomputer.php">Computer</li></a>
-                    
-                    <li class="nav-item d-flex justify-content-center d-block  mx-1 my-2 px-3" role="presentation"><a class="nav-link" style="color:white;" href="guestnursing.php">Nursing</li></a>
+                    //         $ratings = $conn->query("SELECT * FROM ratings WHERE ID = '$ID'");
+                    //         $i = 1;
+                    //         $rate_sum = 0;
+                    //         while ($rating = $ratings->fetch_assoc()) {
+                    //             $rate_sum += $rating['rates'];
 
-                    <li class="nav-item d-flex justify-content-center d-block  mx-1 my-2 px-3" role="presentation"><a class="nav-link" style="color:white;" href="guesthotelmanagement.php">Hotel Management</li></a>
-                    
-                    <li class="nav-item d-flex justify-content-center d-block  mx-1 my-2 px-3" role="presentation"><a class="nav-link" style="color:white;" href="guestaccountancy.php">Accountancy</li></a>
-                    
-                </ul><span class=""> </span></div>
-        </div>
-    </nav>
-</div>
-<div class="container">
-    <img class="" src="assets/img/course/accountancy_banner1.jpg" style="height:300px; width:100%; border-style: inset;">
-</div>
-<main class="page blog-post-list">
-<section class="clean-block clean-blog-list dark" style="background-image: linear-gradient(to left, green,#fde8ec);">
-        <div class="container">
-            <div class="block-content" style="border-style: inset;">
-            <?php 
-            //    $per_page_record = 10;  // Number of entries to show in a page.   
-            //    // Look for a GET variable page if not found default is 1.        
-            //    if (isset($_GET["page"])) {    
-            //        $page  = $_GET["page"];    
-            //    }    
-            //    else {    
-            //      $page=1;    
-            //    }    
-            //    $start_from = ($page-1) * $per_page_record;    
-            //    if(!isset($_POST['search'])){  
-            //     $sql = $conn->query("SELECT * FROM tnr_dataset WHERE College = 'Accountancy' LIMIT $start_from, $per_page_record"); 
-            //    }    
-                
-            //     if($sql){   
-            //         while($row = $sql->fetch_assoc()){
-            //             $title = $row['Title'];
-            //             $author = $row['Author'];
-            //             $year = $row['Year'];
-            //             $kind = $row['Kind_of_Paper'];
-            //             $college = $row['College'];
-            //             $content = $row['Content']; 
-            //             $links = $row['Links'];
-            
-            ?>
-                <div class="clean-blog-post" style="padding:20px; margin: 10px; border-style: inset;">
-                    <div class="row">
-                        <div class="col-lg-5"><embed src="<?php //echo $links ?>" width="100%" height="100%" style="border-style: solid"/></div>
-                        <div class="col-lg-7">
-                            <h3 style="color:black;"><?php //echo $title; ?></h3>
-                            <div class="info" style="color:black;"><span class="text-muted"><?php //echo $year; ?> by&nbsp;<?php //echo $author; ?>&nbsp;&nbsp;(<?php //echo $kind; ?>)</span></div>
-                            <p style="color:black;"><?php //echo $content; ?> </p><button class="btn btn-outline-primary btn-sm" type="button"><a class="disabled-link" href="<?php //echo $links ?>">Download PDF here</a></button></div>
+                    //             $i++;
+                    //         }
+                    //         $rate = number_format($rate_sum / $i, 1);
+
+                    ?>
+
+                            <div class="clean-blog-post" style="padding:20px; margin: 10px; border-style: inset;">
+                                <div class="row">
+                                    <div class="col-lg-5"><embed src="<?php //echo $links ?>" width="100%" height="100%" style="border-style: solid" /></div>
+                                    <div class="col-lg-7">
+                                        <h3 style="color:black;"><?php //echo $title; ?>TITLE</h3>
+                                        <div class="info" style="color:black;"><span class="text-dark">Submitted on Year<?php //echo $date_finished; ?> by:</span></div>
+                                        <div class="info" style="color:black;"><span class="text-dark">Authors<?php //echo $author; ?></span></div>
+                                        <div class="info" style="color:black;">(<span class="text-dark">Document Type<?php //echo $document_type; ?>&nbsp;- Document number<?php //echo $document_number; ?>)</span></div>
+                                        <div class="info" style="color:black;"><span class="text-dark">College<?php //echo $college; ?> &nbsp;- Course<?php //echo $course; ?></span></div>
+                                        <div class="info" style="color:black;"><span class="text-dark">Added by<?php //echo $addedby; ?></span></div>
+                                        <div class="info" style="color:black;"><span class="text-dark"><div class="d-inline bg-success text-white rounded-pill">Tag 1 <?php //echo $tag1; ?></div>&nbsp;|&nbsp;<div class="d-inline bg-success text-white rounded-pill"> Tag 2 <?php //echo $tag2; ?></div>&nbsp;|&nbsp;<div class="d-inline bg-success text-white rounded-pill"> Tag 3 <?php //echo $tag3; ?></div>&nbsp;|&nbsp;<div class="d-inline bg-success text-white rounded-pill"> Tag 4<?php //echo $tag4; ?></div></span></div>
+                                        <p style="color:black;"><?php //echo $content; ?> </p><button class="btn btn-outline-primary btn-sm" type="button"><a href="<?php //echo $links ?>">Download PDF here</a></button>&nbsp;&nbsp;<button class="btn btn-outline-primary btn-sm" type="button"><a href="<?php  ?>">Add to Favorites</a></button>&nbsp;<br><br>
+                                        {{-- <label>Ratings: <?php //echo $rate; ?></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --}}
+                                        <br>
+                                        <?php
+                                        // $book_id = $ID;
+                                        // $check_rate = $conn->query("SELECT COUNT(*) as is_rated FROM ratings WHERE user_id='$uid' AND ID='$book_id' ");
+                                        // if ($check_rate) {
+                                        //     $check_rate = $check_rate->fetch_assoc();
+                                        //     $check_rate = $check_rate['is_rated'];
+                                        // }
+
+
+                                        ?>
+                                        {{-- <form action="" method="post">
+                                            <label>Rate: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input class="form-check-input" type="radio" name="rate" id="flexRadioDefault2" value="1" checked <?php //if ($check_rate > 0) {
+                                                                                                                                        //echo 'disabled';
+                                                                                                                                    //} ?>>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                1
+                                            </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input class="form-check-input" type="radio" name="rate" id="flexRadioDefault2" value="2" checked <?php //if ($check_rate > 0) {
+                                                                                                                                        //echo 'disabled';
+                                                                                                                                    //} ?>>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                2
+                                            </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input class="form-check-input" type="radio" name="rate" id="flexRadioDefault2" value="3" checked <?php //if ($check_rate > 0) {
+                                                                                                                                        //echo 'disabled';
+                                                                                                                                    //} ?>>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                3
+                                            </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input class="form-check-input" type="radio" name="rate" id="flexRadioDefault2" value="4" checked <?php //if ($check_rate > 0) {
+                                                                                                                                       // echo 'disabled';
+                                                                                                                                    //} ?>>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                4
+                                            </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input class="form-check-input" type="radio" name="rate" id="flexRadioDefault2" value="5" checked <?php //if ($check_rate > 0) {
+                                                                                                                                        //echo 'disabled';
+                                                                                                                                    //} ?>>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                5
+                                            </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <button class="btn btn-outline-primary btn-sm" type="submit" name="submitrate" <?php //if ($check_rate > 0) {
+                                                                                                                                //echo 'disabled';
+                                                                                                                            //} ?>>Rate</button>
+                                            <input type="hidden" name="book" value="<?php //echo $book_id ?>">
+
+                                        </form> --}}
+                                    </div>
+                                </div>
+                            </div>
+                    <?php //}
+                    //}
+                    ?>
+                    <br>
+                    <div class="d-flex justify-content-center">
+                        <?php
+                        // $sql = "SELECT COUNT(*) FROM tnr_dataset WHERE College='Accountancy'";
+                        // $rs_result = mysqli_query($conn, $sql);
+                        // $row = mysqli_fetch_row($rs_result);
+                        // $total_records = $row[0];
+
+                        // echo "</br>";
+                        // // Number of pages required.   
+                        // $total_pages = ceil($total_records / $per_page_record);
+                        // $pagLink = "";
+
+                        // if (isset($_POST['search'])) {
+                        //     echo " ";
+                        // } elseif ($page >= 2) {
+                        //     echo "<button class='btn btn-dark' style='border: 2px solid #4CAF50;'><a href='accountancy.php?page=" . ($page - 1) . "'>  Prev </a></button>";
+                        // }
+
+                        // for ($i = 1; $i <= $total_pages; $i++) {
+                        //     if (isset($_POST['search'])) {
+                        //         $pagLink .= " ";
+                        //     } elseif ($i == $page) {
+                        //         $pagLink .= "<button class='btn btn-dark' style='border: 2px solid #4CAF50;'><a style='' class='active' href='accountancy.php?page="
+                        //             . $i . "'><b>" . $i . " </b></a></button>";
+                        //     } else {
+                        //         $pagLink .= "<button class='btn btn-dark' style='border: 2px solid #4CAF50;'><a href='accountancy.php?page=" . $i . "'>   
+                        //                                         " . $i . " </a></button>";
+                        //     }
+                        // };
+
+                        // if (!isset($_POST['search'])) {
+                        //     echo $pagLink;
+                        // } elseif (isset($_POST['search'])) {
+                        //     echo " ";
+                        // }
+
+                        // if (isset($_POST['search'])) {
+                        //     echo " ";
+                        // } elseif ($page < $total_pages) {
+                        //     echo "<button class='btn btn-dark' style='border: 2px solid #4CAF50;'><a href='accountancy.php?page=" . ($page + 1) . "'>  Next </a></button>";
+                        // }
+                        ?>
                     </div>
                 </div>
-                <?php //}
-                    //}
-                 ?>
-                 <br>
-                 <div class="d-flex justify-content-center">  
-                    <?php  
-                        // $sql = "SELECT COUNT(*) FROM tnr_dataset WHERE College='Accountancy'";     
-                        // $rs_result = mysqli_query($conn, $sql);     
-                        // $row = mysqli_fetch_row($rs_result);     
-                        // $total_records = $row[0];     
-                        
-                        // echo "</br>";     
-                        // // Number of pages required.   
-                        // $total_pages = ceil($total_records / $per_page_record);     
-                        // $pagLink = "";       
-                    
-                        // if($page>=2){   
-                        //     echo "<button class='btn btn-dark' style='border: 2px solid #4CAF50;'><a href='guestaccountancy.php?page=".($page-1)."'>  Prev </a></button>";   
-                        // }       
-                                
-                        // for ($i=1; $i<=$total_pages; $i++) {   
-                        // if ($i == $page) {   
-                        //     $pagLink .= "<button class='btn btn-dark' style='border: 2px solid #4CAF50;'><a style='' class='active' href='guestaccountancy.php?page="  
-                        //                                         .$i."'><b>".$i." </b></a></button>";   
-                        // }               
-                        // else  {   
-                        //     $pagLink .= "<button class='btn btn-dark' style='border: 2px solid #4CAF50;'><a href='guestaccountancy.php?page=".$i."'>   
-                        //                                         ".$i." </a></button>";     
-                        // }   
-                        // };     
-                        // echo $pagLink;   
-                
-                        // if($page<$total_pages){   
-                        //     echo "<button class='btn btn-dark' style='border: 2px solid #4CAF50;'><a href='guestaccountancy.php?page=".($page+1)."'>  Next </a></button>";   
-                        // }   
-                    ?>    
-                </div>  
             </div>
-        </div>
-    </section>
-</main>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/script.min.js"></script> -->
+        </section>
+    </main>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.min.js"></script> --}}
 @endsection

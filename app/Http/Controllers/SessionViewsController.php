@@ -30,5 +30,14 @@ class SessionViewsController extends Controller
     public function homepage(){
         return view('SessionViews.homepage');
     }
+    public function recommendationpage(){
+        return view('SessionViews.recommendationpage');
+    }
+    public function savedpage(){
+        return view('SessionViews.savedpage');
+    }
+    public function profilepage(){
+        return view('SessionViews.profilepage');
+    }
 
 }

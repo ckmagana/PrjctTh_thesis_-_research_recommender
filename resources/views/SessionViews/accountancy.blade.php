@@ -13,7 +13,7 @@
         </div>
         <section class="clean-block clean-blog-list dark" style="background-image: linear-gradient(to left, green,#fde8ec);">
         <div class="container">
-            <img class="imghover" src="assets/img/course/accountancy_banner1.jpg" style="height:300px; width:100%; border-style: inset;">
+            <img class="imghover" src="{{ asset('img/course/accountancy_cover.jpg') }}" alt="Accountancy Cover" style="height:300px; width:100%; border-style: inset;" >
         </div>
         </section>
         <br>
@@ -63,10 +63,15 @@
                                     <div class="row">
                                         <div class="col-lg-5"><embed src="<?php //echo $links ?>" width="100%" height="100%" style="border-style: solid" /></div>
                                         <div class="col-lg-7">
-                                            <h3 style="color:black;"><?php //echo $title; ?></h3>
-                                            <div class="info" style="color:black;"><span class="text-muted"><?php //echo $year; ?> by&nbsp;<?php //echo $author; ?>&nbsp;&nbsp;(<?php //echo $kind; ?>)</span></div>
+                                            <h3 style="color:black;"><?php //echo $title; ?>TITLE</h3>
+                                            <div class="info" style="color:black;"><span class="text-dark">Submitted on Year<?php //echo $date_finished; ?> by:</span></div>
+                                            <div class="info" style="color:black;"><span class="text-dark">Authors<?php //echo $author; ?></span></div>
+                                            <div class="info" style="color:black;">(<span class="text-dark">Document Type<?php //echo $document_type; ?>&nbsp;- Document number<?php //echo $document_number; ?>)</span></div>
+                                            <div class="info" style="color:black;"><span class="text-dark">College<?php //echo $college; ?> &nbsp;- Course<?php //echo $course; ?></span></div>
+                                            <div class="info" style="color:black;"><span class="text-dark">Added by<?php //echo $addedby; ?></span></div>
+                                            <div class="info" style="color:black;"><span class="text-dark"><div class="d-inline bg-success text-white rounded-pill">Tag 1 <?php //echo $tag1; ?></div>&nbsp;|&nbsp;<div class="d-inline bg-success text-white rounded-pill"> Tag 2 <?php //echo $tag2; ?></div>&nbsp;|&nbsp;<div class="d-inline bg-success text-white rounded-pill"> Tag 3 <?php //echo $tag3; ?></div>&nbsp;|&nbsp;<div class="d-inline bg-success text-white rounded-pill"> Tag 4<?php //echo $tag4; ?></div></span></div>
                                             <p style="color:black;"><?php //echo $content; ?> </p><button class="btn btn-outline-primary btn-sm" type="button"><a href="<?php //echo $links ?>">Download PDF here</a></button>&nbsp;&nbsp;<button class="btn btn-outline-primary btn-sm" type="button"><a href="<?php  ?>">Add to Favorites</a></button>&nbsp;<br><br>
-                                            <label>Ratings: <?php //echo $rate; ?></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            {{-- <label>Ratings: <?php //echo $rate; ?></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --}}
                                             <br>
                                             <?php
                                             // $book_id = $ID;
@@ -78,7 +83,7 @@
 
 
                                             ?>
-                                            <form action="" method="post">
+                                            {{-- <form action="" method="post">
                                                 <label>Rate: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 <input class="form-check-input" type="radio" name="rate" id="flexRadioDefault2" value="1" checked <?php //if ($check_rate > 0) {
                                                                                                                                             //echo 'disabled';
@@ -115,7 +120,7 @@
                                                                                                                                 //} ?>>Rate</button>
                                                 <input type="hidden" name="book" value="<?php //echo $book_id ?>">
 
-                                            </form>
+                                            </form> --}}
                                         </div>
                                     </div>
                                 </div>
