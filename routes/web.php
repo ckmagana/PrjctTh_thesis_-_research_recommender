@@ -32,6 +32,8 @@ Route::get('/SessionViews/engineering', [SessionViewsController::class, 'enginee
 Route::get('/SessionViews/hotelmanagement', [SessionViewsController::class, 'hotelmanagement']);
 Route::get('/SessionViews/nursing', [SessionViewsController::class, 'nursing']);
 Route::get('/SessionViews/homepage', [SessionViewsController::class, 'homepage']);
+Route::get('/SessionViews/recommendationpage', [SessionViewsController::class, 'recommendationpage']);
+Route::get('/SessionViews/savedpage', [SessionViewsController::class, 'savedpage']);
 Route::get('/SessionViews/profilepage', [SessionViewsController::class, 'profilepage']);
 Route::get('/AdminViews/manageaccount', [AdminViewsController::class, 'manageaccount']);
 Route::get('/AdminViews/managedocument', [AdminViewsController::class, 'managedocument']);

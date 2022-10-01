@@ -56,9 +56,9 @@
                             href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
                                 class="fas fa-user fa-fw"></i></a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#!">Profile</a></li>
-                            <li><a class="dropdown-item" href="#adminlogout">Recommendations</a></li>
-                            <li><a class="dropdown-item" href="#!">Favorites</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/SessionViews/profilepage') }}">Profile</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/SessionViews/recommendationpage') }}">Recommendations</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/SessionViews/savedpage') }}">Saved</a></li>
                             <li><a class="dropdown-item" href="#adminlogout">Logout</a></li>
                         </ul>   
                         
